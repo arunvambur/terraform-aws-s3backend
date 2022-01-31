@@ -36,6 +36,7 @@ data "aws_iam_policy_document" "policy_doc" {
         resources = [
             aws_s3_bucket.s3_bucket.arn
         ]
+    }
 
         statement {
             actions = ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"]
@@ -50,7 +51,7 @@ data "aws_iam_policy_document" "policy_doc" {
 
             resources = [aws_dynamodb_table.dynamodb_table.arn]
         }
-    }  
+    
 }
 
 resource "aws_iam_policy" "iam_policy" {
