@@ -12,7 +12,7 @@ resource "aws_iam_role" "iam_role" {
         "Version" : "2012-10-17",
         "Statement": [
             {
-                "Action": "sts:AssumeRule",
+                "Action": "sts:AssumeRole",
                 "Principal": {
                     "AWS": ${jsonencode(local.principal_arns)}
                 },
